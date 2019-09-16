@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bae-x0-KeW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Entry View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="EntryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="EntryViewController" customModule="AgoraDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBM-eM-8NM">
+                                <rect key="frame" x="113" y="303" width="149" height="93"/>
+                                <color key="backgroundColor" red="0.1332358102" green="0.53438293150000005" blue="0.090580201939999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="1zj-0S-BCO"/>
+                                    <constraint firstAttribute="height" constant="93" id="D1P-sR-q9p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Join Channel"/>
+                                <connections>
+                                    <segue destination="kNd-up-2RP" kind="show" id="Z1j-ve-ZED"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agoralightblue.png" translatesAutoresizingMaskIntoConstraints="NO" id="xnd-kk-RIf">
+                                <rect key="frame" x="67.5" y="76" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7bo-3i-4IL"/>
+                                    <constraint firstAttribute="width" constant="240" id="8PU-O2-JVo"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="rctest" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jl-64-8H7" userLabel="textfiled">
+                                <rect key="frame" x="67.5" y="222" width="240" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="sYu-8y-0h5"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MBM-eM-8NM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Gsf-yd-2Ve"/>
+                            <constraint firstItem="MBM-eM-8NM" firstAttribute="top" secondItem="7jl-64-8H7" secondAttribute="bottom" constant="50" id="H1Z-Am-D82"/>
+                            <constraint firstItem="7jl-64-8H7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KUS-Bh-C34"/>
+                            <constraint firstItem="xnd-kk-RIf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="Sv0-T2-arX"/>
+                            <constraint firstItem="7jl-64-8H7" firstAttribute="top" secondItem="xnd-kk-RIf" secondAttribute="bottom" constant="18" id="nXm-0b-t4c"/>
+                            <constraint firstItem="xnd-kk-RIf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rS8-AY-4p7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iIH-TL-tBa"/>
+                    <connections>
+                        <outlet property="joinButton" destination="MBM-eM-8NM" id="7Yh-27-4XB"/>
+                        <outlet property="textField" destination="7jl-64-8H7" id="qyL-fk-9In"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045.5999999999999" y="116.49175412293854"/>
+        </scene>
+        <!--Video Chat Room-->
+        <scene sceneID="qP9-dC-gBU">
+            <objects>
+                <viewController storyboardIdentifier="MultiVideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kNd-up-2RP" customClass="MultiVideoViewController" customModule="AgoraDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N0m-w3-BLt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hc-gW-g5f">
+                                <rect key="frame" x="0.0" y="64" width="375" height="564"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVx-Xb-3I1" userLabel="RemoteView">
+                                <rect key="frame" x="255" y="84" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="OZ4-hd-fuJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="XpR-r0-NQO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="we8-F5-Tfg" userLabel="RemoteView2">
+                                <rect key="frame" x="255" y="234" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5GS-Nm-Ngk"/>
+                                    <constraint firstAttribute="height" constant="100" id="l2p-qw-bMx"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3TK-Jx-kXw">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Video" width="84" id="6EH-ab-KfY">
+                                        <connections>
+                                            <action selector="videoButtonPressed:" destination="kNd-up-2RP" id="uyQ-ZH-T8B"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9Z3-bY-fQZ"/>
+                                    <barButtonItem title="Mic" id="cJp-Tl-rlx">
+                                        <connections>
+                                            <action selector="voiceButtonPressed:" destination="kNd-up-2RP" id="4d5-xs-siV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Psr-a3-l8d"/>
+                                    <barButtonItem title="Speaker" id="zm3-In-px5">
+                                        <connections>
+                                            <action selector="speakerButtonPressed:" destination="kNd-up-2RP" id="Z5O-5k-WEv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RnZ-TY-aiV"/>
+                                    <barButtonItem title="Share" id="BMZ-6l-A2e">
+                                        <connections>
+                                            <action selector="shareButtonPressed:" destination="kNd-up-2RP" id="hzh-G1-iHi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="we8-F5-Tfg" firstAttribute="centerX" secondItem="VVx-Xb-3I1" secondAttribute="centerX" id="949-ry-BYh"/>
+                            <constraint firstItem="we8-F5-Tfg" firstAttribute="centerY" secondItem="VVx-Xb-3I1" secondAttribute="centerY" constant="150" id="9Oq-FD-luc"/>
+                            <constraint firstItem="3TK-Jx-kXw" firstAttribute="trailing" secondItem="1hc-gW-g5f" secondAttribute="trailing" id="FkM-P7-OP9"/>
+                            <constraint firstItem="3TK-Jx-kXw" firstAttribute="leading" secondItem="N0m-w3-BLt" secondAttribute="leading" id="HxZ-dI-0sq"/>
+                            <constraint firstItem="VVx-Xb-3I1" firstAttribute="top" secondItem="JNz-xd-k9n" secondAttribute="top" constant="20" id="XIZ-o7-Dob"/>
+                            <constraint firstItem="JNz-xd-k9n" firstAttribute="trailing" secondItem="VVx-Xb-3I1" secondAttribute="trailing" constant="20" id="cTE-wl-6h8"/>
+                            <constraint firstAttribute="trailing" secondItem="3TK-Jx-kXw" secondAttribute="trailing" id="ggi-ug-jCF"/>
+                            <constraint firstItem="1hc-gW-g5f" firstAttribute="top" secondItem="JNz-xd-k9n" secondAttribute="top" id="lO6-fr-Vah"/>
+                            <constraint firstItem="3TK-Jx-kXw" firstAttribute="leading" secondItem="1hc-gW-g5f" secondAttribute="leading" id="sAl-LA-zpw"/>
+                            <constraint firstItem="JNz-xd-k9n" firstAttribute="bottom" secondItem="1hc-gW-g5f" secondAttribute="bottom" constant="39" id="wDn-NX-W51"/>
+                            <constraint firstItem="3TK-Jx-kXw" firstAttribute="bottom" secondItem="JNz-xd-k9n" secondAttribute="bottom" id="yq5-lK-T8r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JNz-xd-k9n"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Video Chat Room" id="cOt-8N-9Gg">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ka3-Wm-PzW">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ok3-Rw-EKe">
+                                <rect key="frame" x="288" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="onCameraSwitching:" destination="kNd-up-2RP" eventType="touchUpInside" id="pXM-jd-EYx"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fullView" destination="1hc-gW-g5f" id="TAu-Bg-Z54"/>
+                        <outletCollection property="smallViews" destination="VVx-Xb-3I1" collectionClass="NSMutableArray" id="zCw-im-RAO"/>
+                        <outletCollection property="smallViews" destination="we8-F5-Tfg" collectionClass="NSMutableArray" id="0br-iq-9aT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEl-hR-UFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2176.875" y="121.47887323943662"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="o4R-Ec-2uJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bae-x0-KeW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8ZQ-TJ-oiI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xw2-oF-kSj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mkD-fz-zId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392.75362318840581" y="762.72321428571422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="agoralightblue.png" width="350" height="89"/>
+    </resources>
+</document>
